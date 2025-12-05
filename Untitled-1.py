@@ -1,5 +1,6 @@
+import math
+import random
 #ejercicio 1
-
 for n in range(0,101,1):
     print(n)
 
@@ -21,16 +22,62 @@ for numeros in range(valor1 + 1,valor2,1):
     suma += numeros
     print(suma)
     
+
 #ejercicio 4
-# repetir el input al cliente a menos que 
-# indique 0.
-
-
-
-while numero2 != 0:
-    numero2 = int(input("ingrese numero entero = ")) 
-    sumar =+ numero2
+numero = int(input("ingrese numero entero = "))
+sumar = 0
+while numero != 0:
+    sumar += numero 
+    numero = int(input("ingrese numero entero = "))
     
 print(sumar)
-    
 
+
+#ejercicio 5
+numero = int(input("ingrese un numero entre el 0 y el 9 = "))
+numeroElegido = random.randint(0, 9)
+intentos = 0
+while numero != numeroElegido:
+    print("numero incorrecto, intente nuevamente")
+    numero = int(input("ingrese un numero entre el 0 y el 9 = "))
+    intentos += 1
+print("numero correcto")
+print(f"la cantidad de intentos fue de = {intentos}")
+
+
+#ejercicio 6
+for n in range(100,-1,-2):
+    print(n)
+    
+    
+#ejercicio 7
+a = 0
+contador = 0
+numero = int(input("ingrese un numero positivo =  "))
+for i in range(a, numero + 1):
+    contador += i
+print(contador)
+
+
+#ejercicio 8
+    
+pares = 0
+impares = 0 
+positivos = 0
+negativos = 0
+for n in range(1,101):
+    numero = int(input("ingrese 100 numeros para clasificarlos = "))
+    if numero % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+    if numero > 0:
+        positivos += 1
+    elif numero < 0:
+        negativos += 1
+print(f"Cantidad de números pares: {pares}")
+print(f"Cantidad de números impares: {impares}")
+print(f"Cantidad de números positivos: {positivos}")
+print(f"Cantidad de números negativos: {negativos}")
+
+#ejercicio 9
